@@ -3,6 +3,9 @@ const express= require('express');
 const router = express.Router();
 
 const Categorie= require('../models/categorie');
+var fs = require('fs'); 
+  
+// Open file demo.txt in read mode 
 
 /**
  * @route(/)
@@ -10,7 +13,8 @@ const Categorie= require('../models/categorie');
  */
 
 router.get('/', (req,res) => {
-    res.send('App Works !!!!');
+    res.send('front-end/build/index.html');
+
 });
 
 /**
