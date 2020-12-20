@@ -4,22 +4,22 @@
   "description": "example project react with nodejs",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "build": "cd front-end && npm run build",
     "install-front-end": "cd front-end && npm install",
     "dev": "nodemon ./server.js localhost 3080",
     "front-end": "cd front-end && npm start",
-    "heruko-build":"npm run install-front-end && npm run build",
-    "start": "node server.js",
-    "mac": "concurrently   -n, 'server,front-end'    -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
+    "heruko-postbuild":"npm run install-front-end && npm run build",
+    "mac": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbachi/react-nodejs-example.git"
+    "url": "git+https://github.com/sarobidy12/gestionstoke.git"
   },
   "author": "Bhargav Bachina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bbachi/react-nodejs-example/issues"
+    "url": "https://github.com/sarobidy12/gestionstoke/issues"
   },
   "homepage": "https://github.com/bbachi/react-nodejs-example#readme",
   "dependencies": {
