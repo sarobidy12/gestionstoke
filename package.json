@@ -9,7 +9,7 @@
     "dev": "nodemon ./server.js localhost 3080",
     "front-end": "cd front-end && npm start",
     "heruko-build":"npm run install-front-end && npm run build",
-    "start": "node server.bundle.js",
+    "start": "node server.js",
     "mac": "concurrently   -n, 'server,front-end'    -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
   },
   "repository": {
