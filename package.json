@@ -4,13 +4,12 @@
   "description": "example project react with nodejs",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "build": "cd front-end && npm run build",
     "install-front-end": "cd front-end && npm install",
-    "dev": "nodemon ./server.js localhost 3080",
-    "front-end": "cd front-end && npm start",
+    "front-end": "cd front-end && npm install",
     "heruko-postbuild":"npm run install-front-end && npm run build",
-    "mac": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
+    "dev": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/sarobidy12/gestionstoke/issues"
   },
-  "homepage": "https://github.com/bbachi/react-nodejs-example#readme",
+  "homepage": "https://github.com/sarobidy12/gestionstoke",
   "dependencies": {
     "axios": "^0.21.0",
     "concurrently": "^5.3.0",
