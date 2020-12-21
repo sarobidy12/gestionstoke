@@ -16,7 +16,13 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "front-end-install": "npm install --prefix front-end",
+    "server": "nodemon server.js",
+    "front-end": "npm start --prefix front-end",
+    "dev": "concurrently \"npm run server\" \"npm run front-end\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end"
+
   },
   "repository": {
     "type": "git",
