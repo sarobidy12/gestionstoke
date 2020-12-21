@@ -1,39 +1,36 @@
 {
-  "name": "react-nodejs-example",
+  "name": "gestionstoke",
   "version": "1.0.0",
-  "description": "example project react with nodejs",
+  "description": "",
   "main": "server.js",
-  "scripts": {
-    "start": "nodemon server.js",
-    "build": "cd front-end && npm run build",
-    "install-front-end": "cd front-end && npm install",
-    "dev": "nodemon ./server.js localhost 3080",
-    "front-end": "cd front-end && npm start",
-    "heruko-build":"npm run install-front-end && npm run build",
-    "mac": "concurrently   -n, 'server,front-end'    -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bbachi/react-nodejs-example.git"
-  },
-  "author": "Bhargav Bachina",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bbachi/react-nodejs-example/issues"
-  },
-  "homepage": "https://github.com/bbachi/react-nodejs-example#readme",
   "dependencies": {
     "axios": "^0.21.0",
     "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.4",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.6",
-    "webpack": "^4.43.0"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "cd front-end && npm run build",
+    "install-front-end": "cd front-end && npm install",
+    "front-end": "cd front-end && npm start",
+    "dev": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\"",
+    "heruko-postbuild":"npm run install-front-end && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarobidy12/gestionstoke.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarobidy12/gestionstoke/issues"
+  },
+  "homepage": "https://github.com/sarobidy12/gestionstoke#readme"
 }

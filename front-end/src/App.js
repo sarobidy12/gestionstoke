@@ -35,10 +35,9 @@ function App() {
         </div>
 
         <div className='col-md-10'>
-        <Route path="/" component={Index} exact />
-        <Route path="/categorie" component={Categorie} />
-        <Route path="/categorie-add" component={CategorieAdd} />
-
+          <Route path="/" component={Index} exact />
+          <Route path="/categorie" component={Categorie} />
+          <Route path="/categorie-add" component={CategorieAdd} />
         </div>
         </BrowserRouter>
 
