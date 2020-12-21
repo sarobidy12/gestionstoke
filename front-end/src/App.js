@@ -25,10 +25,11 @@ function App() {
 
   return (
     <div>
+        <BrowserRouter>
+
 <Header/>
       <div className='row'>
   
-        <BrowserRouter>
         
         <div className='col-md-2'>
            <Menu/>
@@ -39,9 +40,9 @@ function App() {
           <Route path="/categorie" component={Categorie} />
           <Route path="/categorie-add" component={CategorieAdd} />
         </div>
-        </BrowserRouter>
 
       </div>
+      </BrowserRouter>
       
     </div>
   );
