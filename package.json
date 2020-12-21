@@ -8,8 +8,8 @@
     "build": "cd front-end && npm run build",
     "install-front-end": "cd front-end && npm i",
     "front-end": "cd front-end && npm install",
+    "dev": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\"",
     "heruko-postbuild":"npm run install-front-end && npm run build",
-    "dev": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6" 
+    "nodemon": "^2.0.6",
+    "webpack": "^4.43.0"
   }
 }
