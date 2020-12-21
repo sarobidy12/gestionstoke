@@ -20,7 +20,6 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/gestionstok
 });
  
 // route.get('/', (req,res) => {
-//     res.sendFile(path.join(__dirname + '/front-end/build/index.html'));
 // });
 
 app.use(cors());
@@ -35,7 +34,8 @@ app.use('/delete',deleteC);
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('front-end/build/')); 
     app.get('/', (req, res) => {
-          res.sendFile(path.resolve(__dirname, 'front-end', 'build', 'index.html'));
+         res.sendFile(path.join(__dirname + '/front-end/build/index.html'));
+    //      res.sendFile(path.resolve(__dirname, 'front-end', 'build', 'index.html'));
     }); 
 } 
 
