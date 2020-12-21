@@ -16,10 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "build": "cd front-end && npm run build",
-    "install-front-end": "cd front-end && npm install",
-    "dev": "concurrently   -n, 'server,front-end' -c, 'green,blue' \"nodemon server.js\" \"npm run front-end\""
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
