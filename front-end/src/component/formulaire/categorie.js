@@ -30,7 +30,7 @@ const AddCategorie=()=>{
     }
 
   return (
-     <div   data-aos='fade-up'>
+     <div data-aos='fade-up'>
           <h1>
               Ajouter un Categorie
           </h1>
@@ -42,7 +42,7 @@ const AddCategorie=()=>{
                   <input type='text' className='form-control' name='categorie' id='categorie' />
               </div>
                 <input type='submit'  id={'btn'} className='btn btn-primary'  value='Ajouter une categorie' />
-                <img src='/IMG/loader.gif'  id={'img'} alt='loader' className='btn-loader' />
+                <img src='/IMG/loader.gif'  id={'img'} alt='loader' style={{width:'10%'}} className='btn-loader' />
           </form>
      </div>
   );
