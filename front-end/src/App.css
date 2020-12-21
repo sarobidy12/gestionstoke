@@ -12,3 +12,10 @@ body{
   left: 45%;
   top: 100%;
 }
+
+.btn-loader{
+  width: 50%;
+  position: relative;
+  left: 0%;
+  display: none;
+}

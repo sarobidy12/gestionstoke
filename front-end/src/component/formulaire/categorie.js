@@ -7,6 +7,9 @@ const AddCategorie=()=>{
 
         e.preventDefault();
 
+        document.getElementById('btn').style.display='none';
+        document.getElementById('img').style.display='block';
+
         var data= document.getElementById('categorie').value;
 
         axios({
@@ -15,9 +18,13 @@ const AddCategorie=()=>{
             data:{data:data}
         })
         .then((res)=>{
-             console.log(res.data);
+      
+            document.getElementById('btn').style.display='block';
+             document.getElementById('img').style.display='none';
+
              alert('Categorie ajouter');
-         }).catch((error)=>{
+    
+            }).catch((error)=>{
              alert('erreur est survenue');
          });
     }
@@ -34,7 +41,8 @@ const AddCategorie=()=>{
               <div className='form-group'>
                   <input type='text' className='form-control' name='categorie' id='categorie' />
               </div>
-                <input type='submit' className='btn btn-primary'  value='Ajouter une categorie' />
+                <input type='submit'  id={'btn'} className='btn btn-primary'  value='Ajouter une categorie' />
+                <img src='/IMG/loader.gif'  id={'img'} alt='loader' className='btn-loader' />
           </form>
      </div>
   );

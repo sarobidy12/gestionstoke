@@ -39,6 +39,7 @@ const Categorie=()=>{
          <div className='col-10'>
              
          </div>
+         
          <div className='col-2'>
               <Link to='/categorie-add' className='btn btn-primary'>
                   Ajouter

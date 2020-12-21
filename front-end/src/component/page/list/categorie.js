@@ -6,6 +6,9 @@ const  categorieList=(props)=>{
 
     const handledelete = (e,i)=>{
 
+        document.getElementById('btn-'+i).style.display='none';
+        document.getElementById('img-'+i).style.display='block';
+
         axios({
             url: '/delete/categorie',
             method:'POST',
@@ -19,6 +22,7 @@ const  categorieList=(props)=>{
             ], {
               duration: 1000
             })
+      
             document.getElementById(i).style.display='none';
             
          }).catch((error)=>{
@@ -27,6 +31,7 @@ const  categorieList=(props)=>{
 
     }
 
+ 
     
         return (
             <ul class="list-group" >
@@ -35,7 +40,9 @@ const  categorieList=(props)=>{
                         <div className='row'>
                             <div className='col-10'><h3>{Element.name}</h3></div>
                             <div className='col-2'>
-                                <button to='/categorie-add' className='btn btn-danger'  onClick={()=>{handledelete(this,Element._id)}}>Suprimmer</button>
+                                <button to='/categorie-add' id={'btn-'+Element._id} className='btn btn-danger'  onClick={()=>{handledelete(this,Element._id)}}>Suprimmer</button>
+                                <img src='/IMG/loader.gif'  id={'img-'+Element._id} alt='loader' className='btn-loader' />
+                            
                             </div>
                         </div>
                     </li>})
