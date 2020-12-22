@@ -27,6 +27,10 @@ const Add_marchandise=()=>{
   const Add_marchandise=(e)=>{
         e.preventDefault();
 
+        
+    document.getElementById('btn').style.display='none';
+    document.getElementById('img').style.display='block';
+
         var data={
             type: document.getElementById('type').value,
             categorie: document.getElementById('categorie').value,
