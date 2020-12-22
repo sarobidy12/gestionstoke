@@ -8,6 +8,7 @@ var path = require("path");
 const route = require('./routes/api');
 const add = require('./CRUD/add');
 const deleteC = require('./CRUD/delete');
+const update = require('./CRUD/update');
 
 const app = express(),
       PORT = process.env.PORT || 8080;
@@ -18,10 +19,7 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/gestionstok
         useNewUrlParser: true,
         useUnifiedTopology: true
 });
- 
-// route.get('/', (req,res) => {
-// });
-
+  
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -30,6 +28,7 @@ app.use(morgan('tiny'));
 app.use('/',route);
 app.use('/add',add);
 app.use('/delete',deleteC);
+app.use('/update',update);
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('front-end/build/')); 

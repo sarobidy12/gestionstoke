@@ -11,17 +11,17 @@ const Categorie=()=>{
   useEffect(()=>{
 
     if(stop ===0){
-      axios({
-          url: '/categorie',
-          method:'GET' 
-      })
-      .then((res)=>{
-          setCategorie(res.data)
-          setstop(1);
-      }).catch((error)=>{
-          alert('erreur est survenue');
-      });
-      }
+        axios({
+            url: '/categorie',
+            method:'GET' 
+        })
+        .then((res)=>{
+            setCategorie(res.data)
+            setstop(1);
+        }).catch((error)=>{
+            alert('erreur est survenue');
+        });
+    }
    
   })
 

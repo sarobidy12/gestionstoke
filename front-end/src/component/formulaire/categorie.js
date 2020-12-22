@@ -27,7 +27,8 @@ const AddCategorie=()=>{
             }).catch((error)=>{
              alert('erreur est survenue');
          });
-    }
+
+  }
 
   return (
      <div data-aos='fade-up'>
@@ -43,6 +44,7 @@ const AddCategorie=()=>{
               </div>
                 <input type='submit'  id={'btn'} className='btn btn-primary'  value='Ajouter une categorie' />
                 <img src='/IMG/loader.gif'  id={'img'} alt='loader' style={{width:'10%'}} className='btn-loader' />
+         
           </form>
      </div>
   );

@@ -3,6 +3,7 @@ const express= require('express');
 const router = express.Router();
 
 const Categorie= require('../models/categorie');
+const Marchandise= require('../models/marchandise');
  
 /**
 * 
@@ -16,7 +17,25 @@ router.post('/categorie', (req,res) => {
         if(err){
             res.send(err)
         }else{
-            res.send('save categorie successfull')
+            res.send('delete categorie successfull')
+        }
+      });
+
+})
+
+/**
+* 
+* delete categorie 
+* 
+*/
+
+router.post('/marchandise', (req,res) => {
+
+    Marchandise.deleteOne({ _id: req.body.data }, function (err) {
+        if(err){
+            res.send(err)
+        }else{
+            res.send('delete marchandise successfull')
         }
       });
 

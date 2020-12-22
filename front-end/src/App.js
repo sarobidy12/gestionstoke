@@ -9,11 +9,11 @@ import Index from './component/page/index';
 import Header from './component/body/haeder';
 import Menu from './component/body/menu';
 
-
 //page
 import Categorie from './component/page/categorie';
 import CategorieAdd from './component/formulaire/categorie';
-
+import MarchandiseAdd from './component/formulaire/add_marchandise';
+import MarchandiseUpdate from './component/formulaire/update_marchandise';
 
 function App() {
   
@@ -39,6 +39,8 @@ function App() {
           <Route path="/" component={Index} exact />
           <Route path="/categorie" component={Categorie} />
           <Route path="/categorie-add" component={CategorieAdd} />
+          <Route path="/marchandise/ajouter" component={MarchandiseAdd} />
+          <Route path="/marchandise/update" component={MarchandiseUpdate} />
         </div>
 
       </div>

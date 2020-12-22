@@ -1,7 +1,7 @@
 import React , { useState }from 'react';
 import axios from "axios"; 
 
-const Index=()=>{
+const Update_marchandise=()=>{
 
   const [categorie,setCategorie]= useState([]);
   const [stop,setstop]= useState(1);
@@ -138,4 +138,4 @@ const Index=()=>{
 
 }
 
-export default Index;
+export default Update_marchandise;

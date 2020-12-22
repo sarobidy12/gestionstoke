@@ -13,18 +13,30 @@ const Menu=()=>{
               Dashboard
               </Link>
           </li>
-
+ 
           <li className="nav-item">
               <Link to='/categorie' className="nav-link" aria-current="page" >
                 Les categories
               </Link>
           </li>
+          
         </ul>
 
         <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <Link className="nav-link" to="/">Voire</Link>
+          <span>Les marchandises</span>
         </h6>
+        
+          <li className="nav-item">
+              <Link to='/marchandise/ajouter' className="nav-link" aria-current="page" >
+                Ajouter 
+              </Link>
+          </li>
+
+          <li className="nav-item">
+              <Link to='/marchandise/update' className="nav-link" aria-current="page" >
+                Metre a jour  
+              </Link>
+          </li>
        
       </div>
     </nav>
