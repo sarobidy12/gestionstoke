@@ -20,6 +20,21 @@ router.get('/categorie', (req,res) => {
     })
 });
 
+/**
+ * @route(/marchandise)
+ * 
+*/
+
+router.get('/marchandise', (req,res) => {
+    Marchandise.find({})
+    .then((data)=>{
+        res.send(data);
+    })
+    .catch((error)=>{
+        res.send(error);
+    })
+});
+
 
 /**
  * @route(/find/marchandise)
